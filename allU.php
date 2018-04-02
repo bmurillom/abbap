@@ -19,7 +19,7 @@ if ($_SESSION['livello']>1 ){
     
 
 
-$codU = $_SESSION['id'] ;
+
 
 
 $cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis', 'cinegga00', 'u426573260_primo');
