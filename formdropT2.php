@@ -104,7 +104,8 @@ span.psw {
 
     <?php
   $str= 'Lista tipi dei sensori <br/>';   
-$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis', 'cinegga00', 'u426573260_primo');	
+$ps= 'cinegga00'
+$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis',$ps , 'u426573260_primo');
 $sql = 'SELECT  tipologia , primaP, secondaP, terzaP FROM  tipo ';      
 $ris = mysqli_query($cn,$sql) ; //esegue la query
 $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
