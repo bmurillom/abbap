@@ -20,14 +20,15 @@ session_start();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <script  >
-var date = [];
-var valore= [];
+var dates = [];
+var valores= [];
 var lenght= [];
 
 
  dates = <?php echo json_encode($_date); ?>;
  valores= <?php echo json_encode($_valore); ?>;
-lenght = <?php echo count($_date);; ?>;
+lenght = <?php echo count($_date); ?>;
+
 lenght = lenght +1; 
 
 for (  i = 1 ; i <  lenght ; i++){
