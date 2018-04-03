@@ -22,7 +22,7 @@ if ($_SESSION['livello']>1 ){
 
 
 $str= 'Utenti :<br/>';
-$ps= 'cinegga00'
+$ps= 'cinegga00';
 $cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis',$ps , 'u426573260_primo');
 $sql = 'SELECT *  FROM Utente ';
 $ris = mysqli_query($cn,$sql) ; //esegue la query
@@ -48,7 +48,7 @@ if ($n_ris> 0){
      echo'Non ci sono sensori non assegnati';
 	 
 }
-
+echo $str;
 $cn = null;
  ?> 
 </body>
