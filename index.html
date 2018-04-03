@@ -1,8 +1,8 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<style> Pagina Iniziale
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
@@ -70,7 +70,7 @@ span.psw {
 
 <h2>Gestione Dati Clienti e Sensori </h2>
 
-<form action="entrata.php" method="post">
+<form action="entrata.php" method="post" autocomplete="off">
   <div class="imgcontainer">
     <img src="sensore2.png" alt="Avatar" class="avatar"  width="100" height="100">
   </div>
@@ -82,15 +82,15 @@ span.psw {
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
         
-    <button type="submit" name p1>Login</button>
+    <button type="submit">Login</button>
     <label>
-      <input type="checkbox" checked="checked" name remember> Remember me
+      <input type="checkbox" checked="checked" name ="remember"> Remember me
     </label>
   </div>
 
   
 </form>
-   <form action="Ottienidati.php" method="post">
+   <form action="Ottienidati.php" method="post" autocomplete="off">
   
 
   <div class="container">
@@ -99,7 +99,7 @@ span.psw {
     <label for="psw"><b>Inserisci il codice per ottenere dati delle rilevazioni di un Utente</b></label>
     <input type="text" placeholder="CODICE" name="code" required>
         
-    <button type="submit" name p2>Ottieni Dati</button>
+    <button type="submit">Ottieni Dati</button>
     
   </div>
 
