@@ -39,7 +39,7 @@ if ($n_ris> 0){
 	 
 }
  
-echo "$str";
+echo $str;
    
  
    
