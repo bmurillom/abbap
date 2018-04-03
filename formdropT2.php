@@ -116,7 +116,7 @@ $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
 
    
 if ($n_ris > 0){
-    echo " Lista tipi dei   sensori  <br/>";
+    echo 'Lista tipi dei   sensori  <br/>';
    
     while ($row = $ris->fetch_assoc()) {
     // output data of each row
@@ -126,7 +126,7 @@ if ($n_ris > 0){
     }
     
  }else {
-     echo" Questo utente non rilevazioni ";
+     echo' Questo utente non rilevazioni ';
 	 
 }
  
