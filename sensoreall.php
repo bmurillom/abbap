@@ -11,7 +11,8 @@ session_start();
 
 $str='Lista sensori <br/>';
 $codU = $_SESSION['id'] ;
-$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis', 'cinegga00', 'u426573260_primo');
+$ps= 'cinegga00'
+$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis',$ps , 'u426573260_primo');
 $sql = "SELECT *  FROM dispositivo where proprieta = '$codU' ";
 $ris = mysqli_query($cn,$sql) ; //esegue la query
 $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
