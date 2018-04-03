@@ -34,7 +34,7 @@ if ($n_ris> 0){
     }
     
  }else {
-     echo"Non ci sono sensori";
+     echo'Non ci sono sensori';
 	 
 }
  
