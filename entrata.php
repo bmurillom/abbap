@@ -14,7 +14,8 @@ $ps=  $_POST['password'];
  $_SESSION['pss']= 'cinegga00';
 
 $cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis', $_SESSION['pss'], 'u426573260_primo');
-$sql = "SELECT *  FROM Utente WHERE  nome = '$name' and password = '$ps'";
+
+$sql = "SELECT *  FROM Utente WHERE  nome = '$name' AND password = '$ps'";
 $ris = mysqli_query($cn,$sql) ; //esegue la query
 $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
 
@@ -50,7 +51,7 @@ if ($n_ris> 0){
    
     
 
-$cn = null;
+
 
 ?> 
 </body>
