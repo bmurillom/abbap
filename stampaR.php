@@ -17,7 +17,8 @@ session_start();
 
 $str= 'Lista rilevazioni sensori :<br/>';
 $codU = $_SESSION['id'] ;
-$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis', 'cinegga00', 'u426573260_primo');
+$ps= 'cinegga00'
+$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis',$ps , 'u426573260_primo');
 $sql = 'SELECT codice_S , valore, descrizione FROM  rilevazione';
         
      
