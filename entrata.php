@@ -11,8 +11,9 @@ session_start();
 
 $name =  $_POST['user'];
 $ps=  $_POST['password'];
-$p= 'cinegga00';
-$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis',$p , 'u426573260_primo');
+ $_SESSION['pss']= 'cinegga00';
+
+$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis', $_SESSION['pss'], 'u426573260_primo');
 $sql = "SELECT *  FROM Utente WHERE  nome = '$name' and password = '$ps'";
 $ris = mysqli_query($cn,$sql) ; //esegue la query
 $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
