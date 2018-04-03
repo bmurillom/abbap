@@ -39,8 +39,7 @@ if ($n_ris> 0){
     while ($row = $ris->fetch_assoc()) {
     // output data of each row
    
-     $str= $str."Id: ".$row['id']."  Nome : ".$row['nome']." email  ".$row['email']."  Livello ".$row['livello']."
- -Codice dati ".$row['datiCode']." <br>";
+     $str= $str."Id: ".$row['id']."  Nome : ".$row['nome']." email  ".$row['email']."  Livello ".$row['livello']." Codice dati ".$row['datiCode']." <br>";
        
        
     }
