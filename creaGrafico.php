@@ -20,9 +20,7 @@ session_start();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <script  >
-var dates = [];
-var valores= [];
-var lenght= [];
+
 
 
  dates = <?php echo json_encode($_date); ?>;
