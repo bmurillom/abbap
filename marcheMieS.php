@@ -10,7 +10,8 @@ session_start();
 
 $str= 'Lista marche dei miei dispositivi:<br/>';
 $codU = $_SESSION['id'] ;
-$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis', 'cinegga00', 'u426573260_primo');
+$ps= 'cinegga00'
+$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis',$ps , 'u426573260_primo');
 $sql = " SELECT   marca.id , marca.nome , marca.dataP
         FROM ( dispositivo inner join marca on dispositivo.marca = marca.id) 
         WHERE  proprieta = '$codU'";
