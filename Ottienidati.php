@@ -10,7 +10,7 @@ $codiceD = $_POST['code'];
 $codU = $_SESSION['id'] ;
 
 
-$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis', 'cinegga00', 'u426573260_primo');
+$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis', "cinegga00", 'u426573260_primo');
 $sql = "SELECT *  FROM Utente where datiCode = '$codiceD' ";
 $ris = mysqli_query($cn,$sql) ; //esegue la query
 $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
