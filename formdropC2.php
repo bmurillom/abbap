@@ -79,7 +79,7 @@ span.psw {
   </div>
 
   <div class="container">
-    <label for="uname"><b>Id sensore </b></label>
+    <label for="uname"><b>Id Utente </b></label>
     <input type="text" placeholder="Id" name="id" required>
    
 
@@ -99,13 +99,7 @@ span.psw {
 
     <?php
      
-if ($_SESSION['livello']>1 ){
-        include 'dentroUser2.php';
-       
-    }else{
-        include 'homeadmin2.php';
-       
-    }
+
     
     
 $str= 'Utenti :<br/>';
