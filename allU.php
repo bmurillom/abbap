@@ -22,8 +22,9 @@ if ($_SESSION['livello']>1 ){
 
 
 $str= 'Utenti :<br/>';
-$ps= 'cinegga00';
-$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis',$ps , 'u426573260_primo');
+ $_SESSION['pss']= 'cinegga00';
+
+$cn = mysqli_connect('mysql.hostinger.it', 'u426573260_luis', $_SESSION['pss'], 'u426573260_primo');
 $sql = 'SELECT *  FROM Utente ';
 $ris = mysqli_query($cn,$sql) ; //esegue la query
 $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
