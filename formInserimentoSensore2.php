@@ -71,7 +71,7 @@ span.psw {
 </head>
 <body>
 
-<h2>Inserisci dati del Nuovo sensore  </h2>
+<h2>Inserisci dati del Nuovo sensore attenendoti alle Marche e i Tipi presenti sotto   </h2>
 
 <form action="newsadd.php" method="post">
   <div class="imgcontainer">
@@ -88,18 +88,6 @@ span.psw {
     <label for="uname"><b> Proprieta </b></label>
     <input type="text" placeholder="Id utente proprietario" name="p" required>
 
-
-
-
-
-
-
-
-
-
-
-
-
         
     <button type="submit">Regista</button>
     
@@ -107,6 +95,82 @@ span.psw {
 
   
 </form>
+ <?php
+     
+    
+     $servername = "mysql.hostinger.it";
+$username = "u426573260_luis";
+$password = "cinegga00";
+$dbname = "u426573260_primo";
+
+$codU = $_SESSION['id'] ;
+
+
+$cn = mysqli_connect($servername, $username, $password, $dbname);
+$sql = " SELECT   marca.id , marca.nome , marca.dataP
+        FROM  marca ";
+        
+$ris = mysqli_query($cn,$sql) ; //esegue la query
+$n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
+   
+if ($n_ris> 0){
+     echo " Lista marche dei sensori  : <br>";
+    while ($row = $ris->fetch_assoc()) {
+    // output data of each row
+   
+   echo "-Id Marca : ".$row['id']." -  :  Nome ".$row["nome"]." -Data creazione  ".$row['dataP']." - <br>";
+    
+       
+       
+    }
+    
+ }else {
+     echo" Questo utente non ha  sensori ";
+	 
+}
+ 
+
+
+     
+
+
+
+
+
+
+
+$cn = mysqli_connect($servername, $username, $password, $dbname);
+$sql = " SELECT  tipologia , primaP, secondaP, terzaP
+        FROM  tipo ";
+        
+     
+        
+$ris = mysqli_query($cn,$sql) ; //esegue la query
+$n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
+
+
+
+
+
+   
+if ($n_ris > 0){
+    echo " <br> Lista tipi dei   sensori : <br>";
+   
+    while ($row = $ris->fetch_assoc()) {
+    // output data of each row
+    
+    echo "-Tipologia sensore  : ".$row['tipologia']." ";
+     echo "   Tipo valore stringa    - :  ".$row['primaP']." -  ".$row['secondaP']." - ".$row['terzaP']."<br>";
+    }
+    
+ }else {
+     echo" Questo utente non ha sensori  ";
+	 
+}
+$cn = null;
+
+
+?> 
 
     
 <br>
