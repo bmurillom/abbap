@@ -102,8 +102,9 @@ span.psw {
 
 $codU = $_SESSION['id'] ;
 $str = 'Dati Marca  sensori  :  <br />';
+$passs= 'cinegga00';
 
-$cn = mysqli_connect("mysql.hostinger.it", "u426573260_luis", "cinegga00", "u426573260_primo");
+$cn = mysqli_connect("mysql.hostinger.it", "u426573260_luis", $passs, "u426573260_primo");
 $sql = 'SELECT   marca.id , marca.nome , marca.dataP
         FROM  marca';
         
