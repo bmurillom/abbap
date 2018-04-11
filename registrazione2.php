@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 ?>
@@ -85,6 +86,10 @@ span.psw {
     <input type="text" placeholder="e-mail" name="email" required>
       <label for="uname"><b> Password </b></label>
     <input type="password" placeholder="pass" name="pass" required>
+     <label for="uname"><b> codiceDati </b></label>
+    <input type="password" placeholder="codice per estrapolare i tuoi dati " name="cod" required>
+    <label for="uname"><b> Livello </b></label>
+    <input type="text" placeholder="0 per Admin , 1 per Cliente " name="liv" required>
 
     <button type="submit">Regista</button>
     
