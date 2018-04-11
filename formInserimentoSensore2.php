@@ -98,10 +98,10 @@ span.psw {
  <?php
      
     
-    ;
+   
 
 $codU = $_SESSION['id'] ;
-
+$str = 'Dati Marca  sensori  :  <br />';
 
 $cn = mysqli_connect("mysql.hostinger.it", "u426573260_luis", "cinegga00", "u426573260_primo");
 $sql = " SELECT   marca.id , marca.nome , marca.dataP
@@ -111,11 +111,11 @@ $ris = mysqli_query($cn,$sql) ; //esegue la query
 $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
    
 if ($n_ris> 0){
-     echo " Lista marche dei sensori  : <br>";
+     
     while ($row = $ris->fetch_assoc()) {
     // output data of each row
    
-   echo "-Id Marca : ".$row['id']." -  :  Nome ".$row["nome"]." -Data creazione  ".$row['dataP']." - <br>";
+   $str = $str." -Id Marca : ".$row['id']." -  :  Nome ".$row["nome"]." -Data creazione  ".$row['dataP']." - <br>";
     
        
        
@@ -125,17 +125,12 @@ if ($n_ris> 0){
      echo" Questo utente non ha  sensori ";
 	 
 }
- 
-
-
-     
+   $str = $str."Tipo sensori <br>";
 
 
 
 
 
-
-$cn = mysqli_connect("mysql.hostinger.it", "u426573260_luis", "cinegga00", "u426573260_primo");
 $sql = " SELECT  tipologia , primaP, secondaP, terzaP
         FROM  tipo ";
         
@@ -150,19 +145,19 @@ $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
 
    
 if ($n_ris > 0){
-    echo " <br> Lista tipi dei   sensori : <br>";
+    
    
     while ($row = $ris->fetch_assoc()) {
     // output data of each row
     
-    echo "-Tipologia sensore  : ".$row['tipologia']." ";
-     echo "   Tipo valore stringa    - :  ".$row['primaP']." -  ".$row['secondaP']." - ".$row['terzaP']."<br>";
+     $str = $str."-Tipologia sensore  : ".$row['tipologia']." -   Tipo valore stringa    - :  ".$row['primaP']." -  ".$row['secondaP']." - ".$row['terzaP']."<br>";
     }
     
  }else {
      echo" Questo utente non ha sensori  ";
 	 
 }
+echo  $str ;
 $cn = null;
 
 
