@@ -135,8 +135,7 @@ if ($n_ris> 0){
 
 
 
-
-$cn = mysqli_connect($servername, $username, $password, $dbname);
+$cn = mysqli_connect("mysql.hostinger.it", "u426573260_luis", "cinegga00", "u426573260_primo");
 $sql = " SELECT  tipologia , primaP, secondaP, terzaP
         FROM  tipo ";
         
