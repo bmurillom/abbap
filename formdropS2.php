@@ -113,7 +113,6 @@ $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
 
 
 
-
    
 if ($n_ris> 0){
     while ($row = $ris->fetch_assoc()) {
