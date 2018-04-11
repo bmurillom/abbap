@@ -104,8 +104,8 @@ $codU = $_SESSION['id'] ;
 $str = 'Dati Marca  sensori  :  <br />';
 
 $cn = mysqli_connect("mysql.hostinger.it", "u426573260_luis", "cinegga00", "u426573260_primo");
-$sql = " SELECT   marca.id , marca.nome , marca.dataP
-        FROM  marca ";
+$sql = 'SELECT   marca.id , marca.nome , marca.dataP
+        FROM  marca';
         
 $ris = mysqli_query($cn,$sql) ; //esegue la query
 $n_ris = mysqli_num_rows($ris); //dice il numero di record trovati
@@ -122,7 +122,7 @@ if ($n_ris> 0){
     }
     
  }else {
-     echo" Questo utente non ha  sensori ";
+     echo'Questo utente non ha  sensori ';
 	 
 }
    $str = $str."Tipo sensori <br>";
@@ -131,8 +131,8 @@ if ($n_ris> 0){
 
 
 
-$sql = " SELECT  tipologia , primaP, secondaP, terzaP
-        FROM  tipo ";
+$sql =  'SELECT  tipologia , primaP, secondaP, terzaP
+        FROM  tipo' ;
         
      
         
@@ -154,7 +154,7 @@ if ($n_ris > 0){
     }
     
  }else {
-     echo" Questo utente non ha sensori  ";
+     echo 'Questo utente non ha sensori';
 	 
 }
 echo  $str ;
