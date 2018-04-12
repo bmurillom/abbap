@@ -21,9 +21,6 @@ $idU= $_POST["id"];
    include 'homeU.php';
 
     
- 
-
-
 
 ?> 
 <br>
